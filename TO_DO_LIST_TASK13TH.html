@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO-DO LIST</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel ="stylesheet" href="./CSS/TASK4_TO_DO_LIST.css">
+  <script src="./JAVASCRIPT/TASK4_TO_DO_LIST.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body onload="msg_print()">
+  <center>
+    <h1>TO-DO-LIST <i class="ri-file-list-line"></i></h1>
+    <form>
+      ENTER YOUR NAME: <input type="text" id="user_name" onkeypress="uname(event)" onkeyup="check_validation()"><br>
+      <span id="name_msg"></span><br><br>
+
+      EMAIL: <input type="text" id="user_mail" onkeyup="check_validation()"><br>
+      <span id="mail_msg"></span><br><br>
+                
+      PASSWORD: <input type="password" id="user_pass" onkeyup="check_validation()"><br>
+      <span id="pass_msg"></span><br><br>
+
+      <input type="submit" onclick="submit_btn(event)" id="submit_button" disabled>
+    </form>
+
+    <h2><i class="ri-list-check"></i> LIST <i class="ri-list-check"></i></h2>
+    <table id="main_table">
+      <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>PASSWORD</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
